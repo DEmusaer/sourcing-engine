@@ -1,0 +1,14 @@
+# syntax=docker/dockerfile:1
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install boto3 for S3 access
+RUN pip install --no-cache-dir boto3>=1.26.0
+
+# Copy backup script
+COPY backup.py .
+
+# Run backup
+ENTRYPOINT ["python", "backup.py"]
+CMD ["backup"]
