@@ -18,7 +18,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: dockermusa/sourcing-engine
+  IMAGE_NAME: benjam90/sourcing-engine
 
 jobs:
   build:
